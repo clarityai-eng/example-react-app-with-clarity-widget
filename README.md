@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clarity Widget with React App example
+*NOTE*:  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Run project
 
 In the project directory, you can run:
 
@@ -20,6 +21,7 @@ the library at package `@clarity-ai/widget` can be used.
 It provides a simple API to load and add widgets to a given container.
 
 ### Load: `widget.load(domain)`
+
 Injects the Clarity Widget javascript from the provided domain (with protocol):
     ```javascript
       widget.load('https://some.example.com');
@@ -27,6 +29,7 @@ Injects the Clarity Widget javascript from the provided domain (with protocol):
 You can call it more than once, if the js is already loaded it won't inject it again.
 
 ### Refresh: `widget.refresh(DomElement)`
+
 Adds the widget to the DOM Element Node provided as first argument:
 ```javascript
    widget.refresh(someElement);

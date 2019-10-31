@@ -5,7 +5,7 @@ class ClarityWidget extends React.Component {
   constructor(props) {
     super(props);
     // Widget JS is loaded only once even if "load" is being called more than once.
-    widget.load('https://go.dev.clarity.ai');
+    widget.load('https://example.domain.com');
     this.containerRef = React.createRef();
   }
 
