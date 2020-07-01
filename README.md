@@ -49,10 +49,10 @@ The element should look like this:
     ></div>
 ```
  * `data-clarity-widget` (Mandatory): This is a mandatory attribute 
- * `data-token`: The token for the Clarity API
- * `data-module`: The module this widget should show (ie: "esg-impact")
- * `data-entities`: The entities the widget will be working with (either "funds" or "portfolios")
- * `data-{entity}`: The identifier for the entity being used (attribute key should be either
+ * `data-token` (Mandatory): The token for the Clarity API
+ * `data-module` (Mandatory): The module this widget should show (ie: "esg-impact")
+ * `data-entities` (Mandatory): The entities the widget will be working with (either "funds" or "portfolios")
+ * `data-{entity}` (Mandatory): The identifier for the entity being used (attribute key should be either
  "data-fund" or "data-portfolio")
  * `data-style-attributes-json`: A JSON String with properties to override some styles in the application. There are
  several options to customize:
