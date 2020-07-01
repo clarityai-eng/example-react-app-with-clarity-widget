@@ -39,9 +39,34 @@ The element should look like this:
 ```html
     <div
       data-clarity-widget
-      data-fund="SomeFundIsin"
       data-token="SomeValidToken"
       data-lang="en"
+      data-module="some-module"
+      data-entities="funds"
+      data-fund="SomeFundIsin"
+      data-style-attributes-json="{}"
       data-custom-css="//example.com/test.css"
     ></div>
 ```
+ * `data-clarity-widget` (Mandatory): This is a mandatory attribute 
+ * `data-token`: The token for the Clarity API
+ * `data-module`: The module this widget should show (ie: "esg-impact")
+ * `data-entities`: The entities the widget will be working with (either "funds" or "portfolios")
+ * `data-{entity}`: The identifier for the entity being used (attribute key should be either
+ "data-fund" or "data-portfolio")
+ * `data-style-attributes-json`: A JSON String with properties to override some styles in the application. There are
+ several options to customize:
+    ```json
+       {
+           "fontColor": "rgb(16, 21, 46)",
+            // Google fonts can also be used like this `gFontFamily: 'Times+New+Roman',`
+           "fontFamily": "Times New Roman",
+           "baseFontSize": "12px",
+           "tables": {
+               "headerBgColor": "#ddd",
+               "bodyBgColor": "#fff",
+               "borderColor": "#ddd"
+           }
+       }
+    ``` 
+ * `data-custom-css`: Alternatively a CSS can be provided by url to customize the widget styles.

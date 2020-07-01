@@ -7,6 +7,18 @@ class ClarityWidget extends React.Component {
     // Widget JS is loaded only once even if "load" is being called more than once.
     widget.load('https://example.domain.com');
     this.containerRef = React.createRef();
+    this.customizationObject = {
+      fontColor: 'rgb(16, 21, 46)',
+      // Google fonts can also be used like this `gFontFamily: 'Times+New+Roman',`
+      fontFamily: 'Times New Roman',
+      baseFontSize: '12px',
+      tables: {
+        headerBgColor: '#ddd',
+        bodyBgColor: '#fff',
+        borderColor: '#ddd',
+      },
+    };
+    this.apiToken = 'SOME_TOKEN';
   }
 
   updateWidget() {
@@ -26,9 +38,12 @@ class ClarityWidget extends React.Component {
   render() {
     return <div
       data-clarity-widget
-      data-fund={this.props.fund}
-      data-token=""
+      data-token={this.apiToken}
       data-lang="en"
+      data-module="esg-impact"
+      data-entities="funds"
+      data-fund={this.props.fund}
+      data-style-attributes-json={JSON.stringify(this.customizationObject)}
       data-custom-css="//example.com/test.css"
       ref={this.containerRef}
     >
