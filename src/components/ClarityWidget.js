@@ -18,6 +18,7 @@ class ClarityWidget extends React.Component {
         borderColor: '#ddd',
       },
     };
+    this.metricsIds = 'COMMA, SEPARATED, METRIC, LIST';
     this.apiToken = 'SOME_TOKEN';
   }
 
@@ -42,6 +43,7 @@ class ClarityWidget extends React.Component {
       data-lang="en"
       data-module="esg-impact"
       data-entities="funds"
+      data-metrics-ids={this.metricsIds}
       data-fund={this.props.fund}
       data-style-attributes-json={JSON.stringify(this.customizationObject)}
       data-custom-css="//example.com/test.css"
