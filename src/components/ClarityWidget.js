@@ -22,10 +22,14 @@ class ClarityWidget extends React.Component {
     this.apiToken = 'SOME_TOKEN';
   }
 
+  errorCallback(message) {
+    console.log(message);
+  }
+
   updateWidget() {
     // Call widget.refresh with the DOM element to which the widget should be attached
     // Or call without arguments to attach to any div that matches selector [data-clarity-widget] (document wise!)
-    widget.refresh(this.containerRef.current);
+    widget.refresh(this.containerRef.current, this.errorCallback);
   }
 
   componentDidMount() {
