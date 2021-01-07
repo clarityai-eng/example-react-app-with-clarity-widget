@@ -50,7 +50,6 @@ class ClarityWidget extends React.Component {
       data-metrics-ids={this.metricsIds}
       data-fund={this.props.fund}
       data-style-attributes-json={JSON.stringify(this.customizationObject)}
-      data-custom-css="//example.com/test.css"
       ref={this.containerRef}
     >
     </div>;
