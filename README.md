@@ -3,11 +3,18 @@
 
 ## Run project
 
-In the project directory, you can run:
+Go to the project directory, install the dependencies:
 
-### `yarn start`
+```
+  yarn install
+```
 
-Runs the app in the development mode.<br />
+Start the app in development mode:
+
+```
+  yarn start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
@@ -23,14 +30,17 @@ It provides a simple API to load and add widgets to a given container.
 ### Load: `widget.load(domain)`
 
 Injects the Clarity Widget javascript from the provided domain (with protocol):
-    ```javascript
-      widget.load('https://some.example.com');
-    ```
+
+```javascript
+  widget.load('https://some.example.com');
+```
+
 You can call it more than once, if the js is already loaded it won't inject it again.
 
 ### Refresh: `widget.refresh(DomElement)`
 
 Adds the widget to the DOM Element Node provided as first argument:
+
 ```javascript
    widget.refresh(someElement);
 ```
@@ -44,6 +54,7 @@ The element should look like this:
       data-module="some-module"
       data-entities="funds"
       data-fund="SomeFundIsin"
+      data-metrics-ids="metricsIds"
       data-style-attributes-json="{}"
       data-custom-css="//example.com/test.css"
     ></div>
@@ -54,6 +65,7 @@ The element should look like this:
  * `data-entities` (Mandatory): The entities the widget will be working with (either "funds" or "portfolios")
  * `data-{entity}` (Mandatory): The identifier for the entity being used (attribute key should be either
  "data-fund" or "data-portfolio")
+ * `data-metrics-ids`: A comma separated string of metrics 
  * `data-style-attributes-json`: A JSON String with properties to override some styles in the application. There are
  several options to customize:
     ```json

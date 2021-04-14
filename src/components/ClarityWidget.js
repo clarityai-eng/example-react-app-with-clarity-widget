@@ -8,15 +8,16 @@ class ClarityWidget extends React.Component {
     widget.load('https://example.domain.com');
     this.containerRef = React.createRef();
     this.customizationObject = {
-      fontColor: 'rgb(16, 21, 46)',
-      // Google fonts can also be used like this `gFontFamily: 'Times+New+Roman',`
-      fontFamily: 'Times New Roman',
-      baseFontSize: '12px',
-      tables: {
-        headerBgColor: '#ddd',
-        bodyBgColor: '#fff',
-        borderColor: '#ddd',
-      },
+      // fontFamily: 'Times New Roman',
+      // Google fonts can also be used: 
+      // gFontFamily: 'Times+New+Roman',
+      // baseFontSize: '12px',
+      // fontColor: 'rgb(16, 21, 46)',
+      // tables: {
+      //   headerBgColor: '#ddd',
+      //   bodyBgColor: '#fff',
+      //   borderColor: '#ddd',
+      // },
     };
     this.metricsIds = 'COMMA, SEPARATED, METRIC, LIST';
     this.apiToken = 'SOME_TOKEN';
