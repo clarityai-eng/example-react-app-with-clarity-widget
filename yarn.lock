@@ -1069,6 +1069,14 @@
     "@babel/helper-create-regexp-features-plugin" "^7.12.1"
     "@babel/helper-plugin-utils" "^7.10.4"
 
+"@babel/polyfill@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
+  integrity sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/preset-env@7.12.1":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.12.1.tgz#9c7e5ca82a19efc865384bb4989148d2ee5d7ac2"
@@ -1356,10 +1364,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@clarity-ai/widget@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@clarity-ai/widget/-/widget-0.1.1.tgz#4b5fdffd0b8f86dd6e31b122ddc382ae6b23640d"
-  integrity sha512-5Ylg10jGhmVy2M/lvlUC7viZSSePlGjEErpP4JZQ/+1bC8zkuiDtL+yg/VYFmvUXxQ7pM7YQUmSiCSmtZBab0w==
+"@clarity-ai/widget@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@clarity-ai/widget/-/widget-0.2.0.tgz#49410ec62ee00c904baabf7b393be1235f879e76"
+  integrity sha512-sGtWIoMIY/CMeAVVsZU7TWviePyk6EXoMgyeje38QbCDrCrnYvikJnRef8UeWZPTFud6cg+XneQLxHLNY1mVow==
+  dependencies:
+    "@babel/polyfill" "^7.12.1"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -3695,6 +3705,16 @@ core-js@^2.4.0:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
   integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
+
+core-js@^2.6.5:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
+core-js@^3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.10.1.tgz#e683963978b6806dcc6c0a4a8bd4ab0bdaf3f21a"
+  integrity sha512-pwCxEXnj27XG47mu7SXAwhLP3L5CrlvCB91ANUkIz40P27kUcvNfSdvyZJ9CLHiVoKSp+TTChMQMSKQEH/IQxA==
 
 core-js@^3.6.5:
   version "3.8.2"
