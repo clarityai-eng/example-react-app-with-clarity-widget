@@ -5,7 +5,7 @@ class ClarityWidget extends React.Component {
   constructor(props) {
     super(props);
     // Widget JS is loaded only once even if "load" is being called more than once.
-    widget.load('https://example.domain.com');
+    widget.load('https://go.clarity.ai');
     this.containerRef = React.createRef();
     this.customizationObject = {
       fontFamily: 'Times New Roman',
@@ -20,7 +20,7 @@ class ClarityWidget extends React.Component {
       },
     };
     this.metricsIds = 'COMMA, SEPARATED, METRIC, LIST';
-    this.apiToken = 'SOME_TOKEN';
+    this.apiToken = 'YOUR_CLARITY_AI_TOKEN';
   }
 
   errorCallback(message) {

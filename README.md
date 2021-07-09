@@ -20,6 +20,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+You will need to update the configuration properties in the clarity-widget component [ClarityWidget.js](src/components/ClariyWidget.js) with the right domain and token (to get a valid token go to the user administration menu in ClarityAI webapp):
+
 ## What and where to look
 `ClarityWidget.js` is an example component that can be used more or less as is. It contains a clear example on how
 the library at package `@clarity-ai/widget` can be used.
@@ -32,7 +34,7 @@ It provides a simple API to load and add widgets to a given container.
 Injects the Clarity Widget javascript from the provided domain (with protocol):
 
 ```javascript
-  widget.load('https://some.example.com');
+  widget.load('https://go.clarity.ai');
 ```
 
 You can call it more than once, if the js is already loaded it won't inject it again.
@@ -49,15 +51,16 @@ The element should look like this:
 ```html
     <div
       data-clarity-widget
-      data-token="SomeValidToken"
       data-lang="en"
       data-module="some-module"
       data-entities="funds"
       data-fund="SomeFundIsin"
-      data-metrics-ids="metricsIds"
+      data-sections="KEY_SCORES"
       data-style-attributes-json="{}"
       data-custom-css="//example.com/test.css"
-    ></div>
+      data-token="your-token"
+      data-end-user-id="some-user-id"
+></div>
 ```
  * `data-clarity-widget` (Mandatory): This is a mandatory attribute 
  * `data-token` (Mandatory): The token for the Clarity API
@@ -65,7 +68,6 @@ The element should look like this:
  * `data-entities` (Mandatory): The entities the widget will be working with (either "funds" or "portfolios")
  * `data-{entity}` (Mandatory): The identifier for the entity being used (attribute key should be either
  "data-fund" or "data-portfolio")
- * `data-metrics-ids`: A comma separated string of metrics 
  * `data-style-attributes-json`: A JSON String with properties to override some styles in the application. There are
  several options to customize:
     ```json
@@ -82,3 +84,5 @@ The element should look like this:
        }
     ``` 
  * `data-custom-css`: Alternatively a CSS can be provided by url to customize the widget styles.
+ * `data-end-user-id`: A unique user id.
+ * `data-sections`: The optional sections that you want to add to the widget (ie: 'KEY_SCORES').
